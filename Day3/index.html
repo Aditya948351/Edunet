@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        background-color: aqua;
+        padding: 10px;
+        text-align: center;
+    }
+    footer {
+        background-color: aqua;
+        padding: 40px;
+        text-align: center;
+    }
+    div {
+        display: flex;
+        text-align:center;
+    }
+    /* .border{
+        border: 1px solid black;
+    } */
+    .color {
+        background-color: rgb(255, 0, 0);
+    }
+    .section-1{
+        float:inline-start;
+        width: 50%;
+    }
+    .section-2{
+        float:inline-end;
+        width: 50%;
+        background-color: rgb(255, 113, 108);
+    }
+</style>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <div class="color">
+        <div class="section-1">
+            <p>Section 1</p>
+        </div>
+        <div class="section-2">
+            <p>Section 2</p>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <p>&copy; 2025 DevPath All rights Reserved</p>
+    </footer>
+</body>
+</html>
