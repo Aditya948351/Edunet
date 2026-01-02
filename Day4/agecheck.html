@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals in Javascript</title>
+</head>
+ <body>
+    <h1>JavaScript</h1>
+    <input type="number" id="ageInput" placeholder="Enter your age" onchange="checkAge()">
+    <p id="result"></p>
+    <script>
+        function checknum() {
+            number = document.getElementById("ageInput").value;
+            if (age < 18) {
+                result = "You are a minor.";
+            } else {
+                result = "You are an adult.";
+            }
+            document.getElementById("result").innerHTML = result;
+            let c = console.log("Age checked");
+            if (c) {
+                console.log("Condition evaluated");
+            }
+        }
+    </script>
+
+ </body>
+</html>
