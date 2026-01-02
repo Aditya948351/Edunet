@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Prime Numbers from 1 to 100 using only do while loop</title>
+</head>
+<body>
+    <script>
+        let i = 0;
+        while(i<101) {
+            if(i<2) {
+                i++;
+                continue;
+            }
+            let j = 2;
+            while(j <= i/2) {
+                if(i % j == 0) {
+                    break;
+                }
+                j++;
+            }
+            if(j > i/2) {
+                console.log(i);
+                document.writeln("<h2>" + i + "</h2>")
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>
