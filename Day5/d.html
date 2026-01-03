@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Counter</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: orange;
+        }
+
+        #count {
+            font-size: 48px;
+            color: orange;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JAVASCRIPT COUNTER</h1>
+
+    <!-- This is where the count will appear -->
+    <div id="count">0</div>
+
+    <script>
+        let count = 0;
+        const countDisplay = document.getElementById('count');
+
+        const interval = setInterval(() => {
+            countDisplay.textContent = count;
+            count++;
+
+            if (count > 10) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

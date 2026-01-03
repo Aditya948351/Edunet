@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Counter with Three Buttons</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="heading-text">Javascript Counter</h1>
+            <img src="https://png.pngtree.com/png-vector/20240125/ourmid/pngtree-3d-illustration-stopwatch-png-timer-png-image_11492760.png" alt="Counter Image">
+
+            <section class="counter-display">
+                <p class="heading-text no-underline" id="count">0</p>
+                <script>
+                    let count = 0;
+                    const countDisplay = document.getElementById('count');
+                    while(count < 11) {
+                        count++;
+                        console.log(count);
+                        setInterval(() => {
+                            console.log(count);
+                            countDisplay.innerHTML = count;
+                        }, 1000);
+                        countDisplay.innerHTML = count;  
+                    }
+                </script>
+            </section>
+            <section class="counter-buttons">
+                <div class="inline-buttons">
+                    <input type="button" value="Reset">
+                </div>
+                <div class="inline-buttons">
+                    <input type="button" value="Start">
+
+                </div>
+                <div class="inline-buttons">
+                    <input type="button" value="Stop">
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
