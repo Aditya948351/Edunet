@@ -1,0 +1,22 @@
+html{
+    font-size: 10px;
+    /* Some devs use Percentage to Add the Responsiveness to their website as if Browser Settings is Changed it changes accordingly.  */
+    /* font-size: 62.5%; */ 
+    /* 16px = 100% */
+    /* 10 ---> 100/16*10 */
+}
+
+/* :root {
+    font-size: 10px;
+} */
+
+.box1{
+    font-size: 2rem;
+}
+
+.text-content{
+    font-size: 3rem;
+    border: 1rem solid rebeccapurple;
+    margin: 0.5rem;
+    padding: 4.5rem;
+}

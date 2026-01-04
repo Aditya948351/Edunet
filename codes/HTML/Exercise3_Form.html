@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Form</title>
+</head>
+<body>
+    <h1>Sign Up form</h1>
+    <form action="Exercise1.html" method="GET">
+        <label for="first name">First Name: </label>
+        <input type="text" id="first name" name="first name" placeholder="first name"> <br>
+
+        <label for="last name">Last Name:  </label>
+        <input type="text" id="last name" name="last name" placeholder="last name"> <br>
+
+        <label>Email:  </label>
+        <input type="text" id="Email" name="email" placeholder="email"> <br>
+
+        <label for="Password">Password:  </label>
+        <input type="text" id="Password" name="password" placeholder="password"> <br>
+
+        <p>Select Gender</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male"> <br>
+
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female"> <br>
+
+        <label name="Country">Select Your Country</label>
+        <select name="Country" id="Country">
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="Brazil">Brazil</option>
+        </select>
+
+        <p>Write About Yourself Below</p>
+        <textarea name="text" id="About" cols="30" rows="10" placeholder="Add your thoughts here"></textarea> <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

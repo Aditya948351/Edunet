@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en"> <!-- Language is English -->
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding (UTF-8 standard) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsive design -->
+    <title>Formtype 1</title> <!-- Title of the page displayed on browser tab -->
+</head>
+<body>
+    <h1>Forms</h1> <!-- Heading for the form section -->
+
+    <!-- 🔘 FORM STARTS HERE -->
+    <form action="AfterLogin.html" method="GET">
+        <!-- 'action' = destination file/page when form is submitted -->
+        <!-- 'method' = GET sends form data via URL (visible), use POST for sensitive info -->
+
+        <!-- ✏️ TEXT INPUT - USERNAME -->
+        <label for="username">Username: </label> 
+        <!-- 'for="username"' connects label to input with id="username" -->
+        <input 
+            type="text"           <!-- Type of input: single-line text -->
+            id="username"         <!-- Unique identifier for label binding & JS -->
+            name="username"       <!-- Key sent to backend: 'username=value' -->
+            placeholder="Your Username" 
+            required>             <!-- Ensures this field must be filled before submission -->
+        <br><br>
+
+        <!-- 🔒 PASSWORD INPUT -->
+        <label for="password">Password: </label>
+        <input 
+            type="password"       <!-- Type of input: hides the text as dots -->
+            id="password" 
+            name="password"       <!-- Key sent to backend -->
+            placeholder="Enter password" 
+            required>
+        <br><br>
+
+        <!-- 📧 EMAIL INPUT -->
+        <label for="email">Email: </label>
+        <input 
+            type="email"          <!-- Validates email format automatically -->
+            id="email" 
+            name="email"          <!-- Key sent to backend -->
+            required>
+        <br><br>
+
+        <!-- ✅ SUBMIT BUTTON -->
+        <input 
+            type="submit"         <!-- Button to submit the form -->
+            value="Log In">       <!-- Text shown on the button -->
+
+        <br><br>
+
+        <!-- 👨‍👩‍👧 RADIO BUTTONS: SELECT GENDER -->
+        <p>Select Your Gender</p>
+
+        <!-- Each radio shares the same 'name' = grouped behavior (only 1 can be selected) -->
+
+        <label for="male">Male</label>
+        <input 
+            type="radio" 
+            name="Gender"         <!-- All three radios share the same name -->
+            id="male"             <!-- Unique ID for each -->
+            value="Male">         <!-- Value sent to backend if selected -->
+
+        <label for="female">Female</label>
+        <input 
+            type="radio" 
+            name="Gender" 
+            id="female" 
+            value="Female">
+
+        <label for="other">Other</label>
+        <input 
+            type="radio" 
+            name="Gender" 
+            id="other" 
+            value="Other">
+        <br><br>
+
+        <!-- 🌍 DROPDOWN MENU: SELECT COUNTRY -->
+        <p>Dropdown List</p>
+        <p>Select Your Country</p>
+        <label for="country">Select Country</label>
+        <select 
+            name="Country"        <!-- Key used in backend -->
+            id="country"          <!-- For label connection -->
+            required>
+            <!-- Each option has a value that will be sent to the backend -->
+            <option value="India">India</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Russia">Russia</option>
+            <option value="China">China</option>
+        </select>
+
+        <br><br>
+
+        <!-- 📝 MULTILINE TEXTAREA FOR COMMENTS -->
+        <p>Comment Below</p>
+        <textarea 
+            name="comments"       <!-- Key for backend -->
+            id="comments"         <!-- Optional but useful for JS access -->
+            cols="15" 
+            rows="4" 
+            placeholder="Add Your Comments Here"></textarea>
+        <!-- Allows multiple lines of input -->
+        <br><br>
+
+        <!-- 🎨 COLOR PICKER -->
+        Pick Color: 
+        <input 
+            type="color" 
+            name="colorPicker"    <!-- Name used for backend -->
+            id="colorPicker">     <!-- Optional id for JS/CSS -->
+
+        <br><br>
+
+        <!-- 🕒 DATE & TIME PICKER -->
+        Date & Time: 
+        <input 
+            type="datetime-local" 
+            name="datetime"       <!-- Name for backend -->
+            id="datetime">        <!-- ID for scripting/CSS -->
+        <br><br>
+
+        <!-- ☑️ CHECKBOX -->
+        Accept Terms: 
+        <input 
+            type="checkbox" 
+            name="terms"          <!-- If checked, 'terms=on' will be sent -->
+            id="terms">
+        <br><br>
+
+        <!-- 📁 FILE UPLOAD -->
+        Upload File: 
+        <input 
+            type="file" 
+            name="uploadedFile"   <!-- Will carry file info to backend -->
+            id="uploadedFile">
+    </form>
+    <!-- 🔚 FORM ENDS HERE -->
+</body>
+</html>

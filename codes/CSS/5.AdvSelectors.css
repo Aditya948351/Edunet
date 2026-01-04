@@ -1,0 +1,27 @@
+/*Universal Selectore*/
+*{
+    color: blue;
+}
+
+header{
+    background-color: aquamarine;
+}
+
+section.my-article {
+    background-color: brown;
+}
+
+/*if want to change first h2s colour coming in section*/
+section.my-article > h2 {
+    color: greenyellow;
+
+}
+
+/*changing colours of each p's coming after h2 in the paragraph */
+section.my-article h2+p{
+    color: orangered;
+}
+
+ul+p {
+    color: blueviolet;
+}

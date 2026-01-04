@@ -1,0 +1,15 @@
+.box1 {
+    border: 4px solid red;
+    /* width: 50%; */
+    height: 100vh;
+    padding: 5px;
+    background-color: aliceblue;
+    /* viewport height is the hesight it takes completely fills the Viewport */
+}
+/* viewport cares about the parent it looks after full screen  */
+h1{
+    border:4px solid forestgreen;
+    width: 70vw;
+
+    /* vmin , vmax  */
+}

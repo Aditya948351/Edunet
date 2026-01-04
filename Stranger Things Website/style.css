@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('https://wallpapercat.com/w/full/8/c/f/124601-3840x2160-desktop-4k-stranger-things-wallpaper-image.jpg');
+    background-size: cover;
+}
+
+.navbar {
+    background-color: black;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+}
+
+.nav-list li {
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-evenly;
+}

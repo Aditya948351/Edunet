@@ -1,0 +1,18 @@
+/* inline style Attribute > id selector > class selector > id Selector */
+
+div#container ul.my-songs li {
+    color: brown;
+    background-color: yellow;
+}
+
+/* How to Calculate Specificity */
+/* 0, 1, 1, 3 ---> 113 */
+/* This is How Specificity can be given */
+
+div#container ul.my-songs li.favourite {
+    color: yellow;
+    background: brown;
+}
+
+/* o,0,1,0                  old specificity */
+/* 0,1,2,3 ---> 123         new specificity */

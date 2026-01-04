@@ -47,13 +47,27 @@ input:hover{
     border: 2px solid rgb(255, 0, 0);
 }
 
-img {
-    height: 480px;
-    width: 100%;
-    object-fit: contain;
-}
-
 
 .no-underline {
     text-decoration: none;
+}
+
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  
+}
+
+
+.video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

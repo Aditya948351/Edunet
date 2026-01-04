@@ -1,0 +1,36 @@
+.cool::before {
+    /* add befor the text in html */
+    display: block;
+    content: 'hello ';
+    color: green;
+    border: 1px dotted black;
+    padding: 5px;
+    margin-bottom: 5px;
+
+}
+
+.cool::after {
+    /* add befor the text in html */
+    display: block;
+    content: 'hello ';
+    color: green;
+    border: 1px dotted black;
+    padding: 5px;
+    margin-bottom: 5px;
+
+}
+
+.main-heading::before {
+    content: 'hello ';
+    color: red;
+
+}
+
+
+img {
+    height: 200px;
+    width: 50%;
+}
+
+
+/* replaced elements cant be used like br,iframe,img,etc */

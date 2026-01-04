@@ -1,0 +1,38 @@
+/* Elements which are not paragraph they must be coloured blue */
+/* body :not(.fancy) {
+    color: blue;
+    background-color: aqua;
+} */
+
+/* div:empty {
+    background: #222;
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+} */
+
+/* :root{
+    background-color: red;
+    color: white;
+} */
+
+html{
+    background: #333;
+    color: #eee;
+}
+
+body{
+    background: #222;
+    color: #eee
+}
+
+
+p::first-letter{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+h1,p::selection{
+    background: white;
+    color: red;
+}

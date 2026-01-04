@@ -1,0 +1,37 @@
+/* link , visited, hover , Active */
+
+a:link {
+    color: red;
+}
+
+
+a:hover {
+    color: green;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:active {
+    color: black;
+}
+
+p:active {
+    background-color: aquamarine;
+}
+p:hover {
+    color: blue;
+}
+
+
+input:focus {
+    padding: 5px;
+    outline: none;
+    border: 2px solid green;
+
+}
+
+input:required {
+    color: red;
+}

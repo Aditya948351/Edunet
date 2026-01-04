@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 800px;
+    border: 8px solid green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.container h1{
+    border: 4px solid red;
+    background: lightyellow;
+    /* position: static; */
+    /* position: relative; */
+    top: 150px;
+    /* left: 100px; */
+    z-index: 0;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+
+
+}
+
+h4{
+    position: sticky;
+    top: 0px;
+    background: black;
+    color:#fff;
+}
+
+.container h3{
+    background: black;
+    color: #fff;
+    /* position: fixed;  it will remain fixed irrespective of the scrolling of the Webpage */
+    /* z-index: -1; */
+    position: sticky;
+    top: 0;
+}
+
+
+
+.container p{
+    border: 4px solid rebeccapurple;
+    background: lightgray;
+}
+

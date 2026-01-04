@@ -1,0 +1,23 @@
+/* p:first-child {
+    color: red;
+} */
+
+/* p:first-of-type {
+    color: red;
+} */
+
+/* p:last-child {
+    color: green;
+} */
+
+/* p:last-of-type {
+    /* all last paragraphs colour will be green 
+    color: forestgreen;
+} */
+
+
+/* p:nth-child(2n) {
+    /* this can be as 2*3,2*0, 2n, 2n+1  
+    color: aqua;
+} */
+

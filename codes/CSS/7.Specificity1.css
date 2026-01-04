@@ -1,0 +1,15 @@
+/* inline style Attribute > id selector > class selector > id Selector */
+
+
+h1 {
+    color: orange;
+}
+
+.selector {
+    color: red;
+}
+
+#aditya {
+    color: rgb(59, 0, 198) !important;
+/* important makes its Specificity Very High  */
+}

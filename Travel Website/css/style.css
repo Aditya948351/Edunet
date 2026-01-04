@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+}
+
+ul li{
+    list-style:none;
+}
+
+a{
+    font-size: 1.6rem;
+}
+
+p, li {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500    ;
+}
+
+
+/* ################## utility classes ###############  */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.lg-heading {
+    font-size: 3.5rem;
+}
+
+.md-heading {
+    font-size: 2.2rem;
+}
+
+
+.text-red{
+    color: #e63946;
+}
+
+.text-light{
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.text-black{
+    color: #333333;
+}
+
+.text-gray{
+    color: #555555;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+.btn-primary{
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+
+
+/* ########################   header styling   ###################### */
+
+.header{
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../img/header-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    padding: 1rem;
+}
+
+
+.header .navbar .logo{
+    float: left;
+    font-size: 3.5rem;
+}   
+
+.header .navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar a:link,
+.navbar a:visited{
+    color: #f4f4f4;
+}
+
+.navbar a{ 
+    padding-bottom: 0.5rem;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+
+.navbar::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header .navbar .nav-item {
+    display: inline;
+    padding: 1rem;
+}
+
+
+/* ##############    Header     ######################## */
+
+.header-content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-content h1{
+    text-transform: uppercase;
+    font-weight: 700;  
+}
+
+.header-content p{
+    text-transform: uppercase;
+}
+
+
+
+/* #######################   Showcase Section ########################## */
+.showcase{
+    background: #ddd;
+    padding: 10rem 0;
+}
+
+.row{
+    height: 350px;
+    box-shadow: 5px 5px 20px 0px #aaa;
+    background: #fff;
+}
+
+.row1{
+    margin-bottom: 10rem;
+}
+
+.row1 .img-box, .row2 .text-box {
+    float: left;
+    width: 50%;
+}
+
+.row2 .img-box, .row1 .text-box {
+    float: right;
+    width: 50%;
+}
+
+.row .img-box{
+    height: 100%;
+}
+.row .text-box {
+    padding: 3rem;
+}
+
+.row .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-button {
+    border-radius: 50px;
+    height: fit-content;
+    width: 8rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #e63946;
+    background-color: #fff;
+    border: 2px solid #e63946;
+    cursor: pointer;
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
+}
+
+.showcase-button:hover {
+    background-color: #e63946;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.features{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10rem;
+
+}
+
+.features-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature-box-1 {
+    background-color: aqua;
+}
+
+.feature-box-2 {
+    background-color: lightcoral;
+}
+
+.feature-box-3 {
+    background-color: lightgreen;
+}
+
+.border-line {
+    border: 2px solid #82ff29;
+    display: flex;
+    flex-direction: row;
+    transform: rotateX(90deg);
+}

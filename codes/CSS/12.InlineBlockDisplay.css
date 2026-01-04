@@ -1,0 +1,18 @@
+/* a {
+    border: 2px solid black;
+    margin: 50px;
+    padding: 50px;
+    /* Less control to inline Elements 
+} */
+
+/* if i want all of them so what should I do */
+
+/* So in Inline Block We can do Whatever We want */
+a {
+    border: 2px solid black;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    width: 150px;
+    height: 100px;
+}

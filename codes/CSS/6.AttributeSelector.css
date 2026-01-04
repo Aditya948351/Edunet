@@ -1,0 +1,26 @@
+/* input[type = "text"] { 
+    color: red;
+    background-color: aquamarine;
+}*/
+input[type ^= 't'] {
+    color: forestgreen;
+}  /*just change for attribute with the letter t
+
+
+input[type = "password"] {
+    color: aqua;
+    background-color: blue;
+}
+
+a[href *= "github"] {
+    color: rgb(0, 247, 161);
+}/*change color of containing github*/
+
+a[href ^= "https"] {
+    color: green;
+}     /*change color starting with HTTPS */
+
+/*Change color ending with .com*/
+a[href $= ".com"] {
+    color: orange;
+}
