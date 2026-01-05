@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Calling Demo</title>
+</head>
+<body>
+    <div>
+        <h1>API Demo</h1>
+        <li><pre id="api-response"></pre></li>
+    </div>
+    <div>
+        <h2>Product Titles</h2>
+        <ul> <pre id="product-titles"></pre></ul>
+    </div>
+    <!-- <script>
+        fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(json => {
+                document.getElementById('api-response').innerText = JSON.stringify(json[2], null, 2);
+                document.getElementById('product-titles').innerText = JSON.stringify(json[2].title, null, 2);
+                document.getElementById('product-titles').innerText = json.map(product => product[2].title).join('\n');
+            });
+    </script> -->
+
+    <script>
+        async function getData() {
+            let res = await fetch('https://fakestoreapi.com/products');
+            let products = await res.json();
+            return products;
+        }
+        getData();
+
+        async function showdata() {
+            let data = await getData();
+            document.writeln(data.title);
+        }
+        
+        showdata();
+    </script>
+</body>
+</html>

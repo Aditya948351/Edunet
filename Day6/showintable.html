@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Count of Ratings</th>
+        </tr>
+        <tr>
+            <td><pre id="api-response"></pre></td>
+        </tr>
+    </table>
+</body>
+<script>
+    async function getData() {
+            let res = await fetch('https://fakestoreapi.com/products');
+            let data = await res.json();
+            document.getElementById('api-response').innerText = JSON.stringify(data[1].title, null, 2);
+            document.getElementById('product-titles').innerText = data.map(product => product.title).join('\n');
+        }
+
+    async function showdata() {
+        let data = await getData();
+        data.forEach(data => {
+            document.writeln("<tr>");
+            document.writeln("<td>" + data.id + "</td>");
+            document.writeln("<td>" + data.title + "</td>");
+            document.writeln("<td>" + data.price + "</td>");
+            document.writeln("<td>" + data.description + "</td>");
+            document.writeln("<td>" + data.category + "</td>");
+            document.writeln("<td>" + data.rating.rate + "</td>");
+            document.writeln("<td>" + data.rating.count + "</td>");
+            document.writeln("</tr>");
+        });
+    }     
+</script>
+</html>
