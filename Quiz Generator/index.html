@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGen - Ultimate Quiz Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i>
+                <h1>QuizGen</h1>
+            </div>
+            <nav>
+                <button id="btn-create" class="nav-btn active">Create</button>
+                <button id="btn-play" class="nav-btn">Play</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Creator Section -->
+            <section id="creator-section" class="active-section">
+                <div class="card glass-panel">
+                    <h2><i class="fa-solid fa-pen-to-square"></i> Design Your Quiz</h2>
+                    <div class="input-group">
+                        <label>Question</label>
+                        <input type="text" id="question-input" placeholder="e.g., What is the capital of France?">
+                    </div>
+
+                    <div class="options-grid">
+                        <div class="input-group">
+                            <label>Option A</label>
+                            <input type="text" id="option-a" placeholder="Paris">
+                        </div>
+                        <div class="input-group">
+                            <label>Option B</label>
+                            <input type="text" id="option-b" placeholder="London">
+                        </div>
+                        <div class="input-group">
+                            <label>Option C</label>
+                            <input type="text" id="option-c" placeholder="Berlin">
+                        </div>
+                        <div class="input-group">
+                            <label>Option D</label>
+                            <input type="text" id="option-d" placeholder="Madrid">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Correct Answer</label>
+                        <select id="correct-answer">
+                            <option value="a">Option A</option>
+                            <option value="b">Option B</option>
+                            <option value="c">Option C</option>
+                            <option value="d">Option D</option>
+                        </select>
+                    </div>
+
+                    <button id="add-question-btn" class="primary-btn">
+                        <i class="fa-solid fa-plus"></i> Add Question
+                    </button>
+                </div>
+
+                <div class="questions-list glass-panel">
+                    <h3>Your Questions (<span id="question-count">0</span>)</h3>
+                    <div id="questions-container">
+                        <!-- Questions will be added here -->
+                        <div class="empty-state">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <p>No questions added yet. Start creating!</p>
+                        </div>
+                    </div>
+                    <button id="generate-quiz-btn" class="action-btn" disabled>
+                        <i class="fa-solid fa-rocket"></i> Launch Quiz
+                    </button>
+                </div>
+            </section>
+
+            <!-- Player Section -->
+            <section id="player-section" class="hidden-section">
+                <div id="quiz-start-screen" class="glass-panel center-content">
+                    <h2>Ready to Challenge?</h2>
+                    <p>You have <span id="total-quiz-questions">0</span> questions to answer.</p>
+                    <button id="start-quiz-btn" class="primary-btn pulse">Start Quiz</button>
+                </div>
+
+                <div id="quiz-game-screen" class="glass-panel hidden">
+                    <div class="quiz-header">
+                        <span class="badge">Question <span id="current-q-num">1</span>/<span
+                                id="total-q-num">5</span></span>
+                        <div class="timer-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <h2 id="display-question">Question text goes here?</h2>
+                    <div class="options-container" id="display-options">
+                        <!-- Options injected via JS -->
+                    </div>
+                    <button id="next-question-btn" class="primary-btn hidden">Next <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div id="quiz-result-screen" class="glass-panel center-content hidden">
+                    <div class="score-circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70" id="score-circle-bar"></circle>
+                        </svg>
+                        <div class="score-text">
+                            <span id="final-score">0</span>%
+                        </div>
+                    </div>
+                    <h3>Quiz Completed!</h3>
+                    <p>You got <span id="correct-count">0</span> out of <span id="total-count">0</span> correct.</p>
+                    <div class="action-buttons">
+                        <button id="restart-btn" class="secondary-btn">Restart</button>
+                        <button id="back-to-create-btn" class="primary-btn">Create New</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
